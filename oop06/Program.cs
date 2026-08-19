@@ -166,6 +166,19 @@ namespace oop06
             cinema.AddTicket(t3);
 
             cinema.printAll();
+
+            //e.Call an extension method on a ticket to generate a receipt string and print it.
+            Console.WriteLine();
+            Console.WriteLine("======= Reciept =======");
+            t1.FormattedReceipt();
+            Console.WriteLine("=======================");
+
+            Console.WriteLine();
+            Console.WriteLine("--- Extension Method: Total Revenue ---");
+            ;
+            Console.WriteLine($"Total Revenue : {cinema.Tickets.TotalRevenue()}");
+
+            Console.WriteLine("======= cinema closed ========");
             #endregion
 
             #endregion
