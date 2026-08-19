@@ -1,5 +1,6 @@
 ﻿using ConsoleApp1;
 using System.Collections;
+using System.Drawing;
 using System.Net.Sockets;
 using System.Numerics;
 using System.Xml.Linq;
@@ -158,7 +159,13 @@ namespace oop06
             t1.Book();
             t2.Book();
             t3.Book();
+            //c.Add all three tickets to a Cinema and print them all(the print should go through the Cinema's reporting partial file).
+            Cinema cinema = new Cinema("My cinema");
+            cinema.AddTicket(t1);
+            cinema.AddTicket(t2);
+            cinema.AddTicket(t3);
 
+            cinema.printAll();
             #endregion
 
             #endregion
