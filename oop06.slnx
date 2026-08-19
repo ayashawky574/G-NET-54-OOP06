@@ -1,3 +1,8 @@
 <Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="../../assignment4/assignment/oop4/ConsoleApp1/ConsoleApp1.csproj" />
   <Project Path="oop06/oop06.csproj" />
 </Solution>

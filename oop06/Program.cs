@@ -1,4 +1,7 @@
-﻿using System.Numerics;
+﻿using ConsoleApp1;
+using System.Collections;
+using System.Numerics;
+using System.Xml.Linq;
 using static System.Net.WebRequestMethods;
 
 namespace oop06
@@ -111,7 +114,7 @@ namespace oop06
             // =============================================================================================
 
             //        a) What is a partial class?
-//           is the class being splited into more tha one file comopiler read them as one file
+            //           is the class being splited into more tha one file comopiler read them as one file
             //        Why would a developer split Calculator into two files?
             // team work , large projects , enable code generating , protect manual code 
 
@@ -137,6 +140,20 @@ namespace oop06
 
             #endregion
             #endregion
+
+            #region Part 02 : Practical (Extending the Movie Ticket Booking System)
+            #region a
+            //a.Try to create a plain Ticket object and show(in a comment) that the compiler prevents it.
+            Console.WriteLine("======== Cinema Opened ========");
+            Console.WriteLine("//Ticket t = new Ticket();");
+            Console.WriteLine("Cannot create an instance of the abstract type or interface 'Ticket'");
+            Console.WriteLine();
+            Console.WriteLine("------- All Tickets --------");
+
+            #endregion
+            
+            #endregion
+
         }
     }
 }
