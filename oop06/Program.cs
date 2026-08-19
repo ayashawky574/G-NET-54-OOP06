@@ -1,8 +1,10 @@
 ﻿using ConsoleApp1;
 using System.Collections;
+using System.Net.Sockets;
 using System.Numerics;
 using System.Xml.Linq;
 using static System.Net.WebRequestMethods;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace oop06
 {
@@ -149,9 +151,16 @@ namespace oop06
             Console.WriteLine("Cannot create an instance of the abstract type or interface 'Ticket'");
             Console.WriteLine();
             Console.WriteLine("------- All Tickets --------");
+            //b.Create one of each ticket type with hardcoded data.Book all three.
+            Ticket t1 = new StandardTicket("Inception" , TicketType.Standard , new SeatLocation('A',5), 80 , "1");
+            Ticket t2 = new VIPTicket("Inception", TicketType.VIP, new SeatLocation('a', 4), 200, true);
+            Ticket t3 = new IMAXTicket("Dune ", TicketType.IMAX , new SeatLocation('A' ,2 ) , 130 , true);
+            t1.Book();
+            t2.Book();
+            t3.Book();
 
             #endregion
-            
+
             #endregion
 
         }
