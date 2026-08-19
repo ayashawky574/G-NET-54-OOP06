@@ -1,4 +1,7 @@
-﻿namespace oop06
+﻿using System.Numerics;
+using static System.Net.WebRequestMethods;
+
+namespace oop06
 {
     internal class Program
     {
@@ -68,6 +71,69 @@
 
             //c) If you call Status() on a Toaster object, what will it return? Why?
             //will return stand by as it is a virtual method toaster didnt do override then it will use the base class implementation
+
+            #endregion
+
+            #region Q4
+
+            //Q4: Look at the following code and answer the questions below:
+
+            // File: Calculator.cs
+            //public partial class Calculator
+            //        {
+            //            public double LastResult { get; private set; }
+            //            partial void OnCalculated(double result);
+
+            //            public double Add(double a, double b)
+            //            {
+            //                LastResult = a + b;
+            //                OnCalculated(LastResult);
+            //                return LastResult;
+            //            }
+            //        }
+
+            //        // File: Calculator.Logging.cs
+            //        public partial class Calculator
+            //        {
+            //            partial void OnCalculated(double result)
+            //            {
+            //                Console.WriteLine($"Log: result = {result}");
+            //            }
+            //        }
+
+            //        // File: DoubleExtensions.cs
+            //        public static class DoubleExtensions
+            //        {
+            //            public static string ToCurrency(this double value)
+            //                => $"${value:F2}";
+
+
+            // =============================================================================================
+
+            //        a) What is a partial class?
+//           is the class being splited into more tha one file comopiler read them as one file
+            //        Why would a developer split Calculator into two files?
+            // team work , large projects , enable code generating , protect manual code 
+
+
+            //        b) What is a partial method?
+            //        method declared in one parial class implemented in another 
+            //        What happens if the OnCalculated() implementation in Calculator.Logging.cs is deleted — will the code still compile? Why?
+            // yes , the compile will remove it as the implementation of pertioa class is optional
+
+            //c) What is an extension method?
+            // method we can it ti an existing type with out editing in the source code
+            //What are the three rules for writing one?
+            // static class - static method - this 1st param
+
+            //d) What will the following code print?
+            //Calculator calc = new Calculator();
+            //double result = calc.Add(19.5, 0.5);
+            //Console.WriteLine(result.ToCurrency());
+
+            // $20.00
+
+
 
             #endregion
             #endregion
