@@ -26,6 +26,50 @@
             //When would you choose one over the other?
             //if roles or capability => interface / identity or shared behavior => abstract class
             #endregion
+
+            #region Q3
+            //        Q3: Look at the following code and answer the questions below:
+
+            // public abstract class Appliance
+            //        {
+            //            public string Brand { get; set; }
+
+            //            protected Appliance(string brand) { Brand = brand; }
+
+            //            public abstract double PowerConsumption();
+
+            //            public virtual string Status() => "Standby";
+
+            //            public string Label() => $"{Brand} - {PowerConsumption()}W";
+            //        }
+
+            //        public class WashingMachine : Appliance
+            //        {
+            //            public WashingMachine(string brand) : base(brand) { }
+            //            public override double PowerConsumption() => 500;
+            //            public override string Status() => "Washing";
+            //        }
+
+            //        public class Toaster : Appliance
+            //        {
+            //            public Toaster(string brand) : base(brand) { }
+            //            public override double PowerConsumption() => 800;
+            //        }
+            //======================================================================
+            //a) Can you write: Appliance a = new Appliance("LG"); ? Why or why not?
+            // no ,as Appliance is abstract class which cant create an object from it
+
+            //b) What is the difference between the three methods: PowerConsumption(),
+            // abstract method as any class inherit from this class must implement it as fit his behavior
+            //Status(),
+            // virtual method each class inherete this class can overide it to fit his behavior or let it as it is
+            //and Label()
+            //concerete method which suitable for all classes inherite this class
+
+            //c) If you call Status() on a Toaster object, what will it return? Why?
+            //will return stand by as it is a virtual method toaster didnt do override then it will use the base class implementation
+
+            #endregion
             #endregion
         }
     }
